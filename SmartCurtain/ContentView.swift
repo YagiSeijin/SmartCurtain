@@ -9,28 +9,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    init(){
+        UITabBar.appearance().barTintColor = UIColor(named: "tab")
+    }
     @State private var selection = 0
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
+            Text("Control View")
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("first")
-                        Text("First")
+                        Image(systemName: "gear")
+                        Text("Control")
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            Text("Alarm View")
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("second")
-                        Text("Second")
+                        Image(systemName: "alarm.fill")
+                        Text("Alarm")
                     }
                 }
                 .tag(1)
+            Text("Search View")
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "antenna.radiowaves.left.and.right")
+                        Text("Search")
+                    }
+                }
+                .tag(2)
+
         }
     }
 }
