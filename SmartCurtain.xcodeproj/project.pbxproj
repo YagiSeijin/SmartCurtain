@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE24237524F2CA990096D9BA /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24237424F2CA990096D9BA /* ControlView.swift */; };
+		CE24237724F56D270096D9BA /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24237624F56D260096D9BA /* AlarmView.swift */; };
+		CE24237924F56E060096D9BA /* BleStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24237824F56E060096D9BA /* BleStateView.swift */; };
 		CE5A7AE824E6BD6F00399F1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7AE724E6BD6F00399F1D /* AppDelegate.swift */; };
 		CE5A7AEA24E6BD6F00399F1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7AE924E6BD6F00399F1D /* SceneDelegate.swift */; };
 		CE5A7AEC24E6BD6F00399F1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7AEB24E6BD6F00399F1D /* ContentView.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE24237424F2CA990096D9BA /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		CE24237624F56D260096D9BA /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
+		CE24237824F56E060096D9BA /* BleStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleStateView.swift; sourceTree = "<group>"; };
 		CE5A7AE424E6BD6F00399F1D /* SmartCurtain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCurtain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A7AE724E6BD6F00399F1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5A7AE924E6BD6F00399F1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 				CE5A7AE724E6BD6F00399F1D /* AppDelegate.swift */,
 				CE5A7AE924E6BD6F00399F1D /* SceneDelegate.swift */,
 				CE5A7AEB24E6BD6F00399F1D /* ContentView.swift */,
+				CE24237424F2CA990096D9BA /* ControlView.swift */,
+				CE24237624F56D260096D9BA /* AlarmView.swift */,
+				CE24237824F56E060096D9BA /* BleStateView.swift */,
 				CE5A7AED24E6BD7C00399F1D /* Assets.xcassets */,
 				CE5A7AF224E6BD7C00399F1D /* LaunchScreen.storyboard */,
 				CE5A7AF524E6BD7C00399F1D /* Info.plist */,
@@ -267,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE24237524F2CA990096D9BA /* ControlView.swift in Sources */,
 				CE5A7AE824E6BD6F00399F1D /* AppDelegate.swift in Sources */,
+				CE24237924F56E060096D9BA /* BleStateView.swift in Sources */,
+				CE24237724F56D270096D9BA /* AlarmView.swift in Sources */,
 				CE5A7AEA24E6BD6F00399F1D /* SceneDelegate.swift in Sources */,
 				CE5A7AEC24E6BD6F00399F1D /* ContentView.swift in Sources */,
 			);

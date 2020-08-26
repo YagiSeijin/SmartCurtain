@@ -16,7 +16,7 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("Control View")
+            ControlView()
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -25,7 +25,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("Alarm View")
+            AlarmView()
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -34,7 +34,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            Text("Search View")
+            BleStateView()
                 .font(.title)
                 .tabItem {
                     VStack {
