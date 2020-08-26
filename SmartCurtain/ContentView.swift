@@ -24,8 +24,7 @@ struct ContentView: View {
                         Image(systemName: "gear")
                         Text("Control")
                     }
-                }
-                .tag(0)
+                }.tag(0)
             //カーテン開閉時刻設定View
             AlarmView()
                 .font(.title)
@@ -34,8 +33,7 @@ struct ContentView: View {
                         Image(systemName: "alarm.fill")
                         Text("Alarm")
                     }
-                }
-                .tag(1)
+                }.tag(1)
             //デバイス接続状態(BLE)View
             BleStateView()
                 .font(.title)
@@ -44,9 +42,7 @@ struct ContentView: View {
                         Image(systemName: "antenna.radiowaves.left.and.right")
                         Text("Search")
                     }
-                }
-                .tag(2)
-
+                }.tag(2)
         }
     }
 }
