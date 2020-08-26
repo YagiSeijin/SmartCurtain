@@ -16,6 +16,7 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
+            //カーテン制御機能View
             ControlView()
                 .font(.title)
                 .tabItem {
@@ -25,6 +26,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
+            //カーテン開閉時刻設定View
             AlarmView()
                 .font(.title)
                 .tabItem {
@@ -34,6 +36,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
+            //デバイス接続状態(BLE)View
             BleStateView()
                 .font(.title)
                 .tabItem {
