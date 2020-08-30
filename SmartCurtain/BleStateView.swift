@@ -10,7 +10,14 @@ import SwiftUI
 
 struct BleStateView: View {
     var body: some View {
-        Color.blue
+        ZStack{
+            Color("background")
+            VStack(){
+                Image("wave04")
+                Text("デバイス検索中")
+                Image("searchBtn")
+            }
+        }
     }
 }
 

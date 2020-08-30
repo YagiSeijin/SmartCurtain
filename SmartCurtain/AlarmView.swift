@@ -9,8 +9,35 @@
 import SwiftUI
 
 struct AlarmView: View {
+    @State var toggle1IsOn = false
+    @State var toggle2IsOn = false
     var body: some View {
-        Color.green
+        VStack(){
+            // 画面の上半分
+            ZStack(){
+                // 背景色を指定
+                Color("night")
+                VStack(){
+                    Image("moon")
+                        .resizable()
+                        .scaledToFit()
+                    Text("0:00")
+                    Toggle(isOn: $toggle1IsOn){Text("")}
+                }
+            }
+            // 画面の下半分
+            ZStack(){
+                // 背景色を指定
+                Color("morning")
+                VStack(){
+                    Toggle(isOn: $toggle2IsOn){Text("")}
+                    Text("0:00")
+                    Image("sun")
+                        .resizable()
+                        .scaledToFit()
+                }
+            }
+        }
     }
 }
 
