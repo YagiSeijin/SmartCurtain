@@ -13,19 +13,26 @@ struct ControlView: View {
         ZStack{
             Color("background")
             VStack(){
+                Spacer().background(Color.blue)
                 // 窓とカーテンのイメージ画像
                 ZStack(){
                     Image("blue_sky")
                     Image("role_curtain05")
                 }
+                Spacer().background(Color.blue)
                 HStack(){
+                    Spacer().background(Color.blue)
                     // カーテン開けるボタン
                     Image("openBtn")
+                    Spacer().background(Color.blue)
                     // カーテン閉めるボタン
                     Image("closeBtn")
+                    Spacer().background(Color.blue)
                 }
+                Spacer().background(Color.blue)
                 // 作動を止めるボタン
                 Image("stopBtn")
+                Spacer().background(Color.blue)
             }
         }
     }
