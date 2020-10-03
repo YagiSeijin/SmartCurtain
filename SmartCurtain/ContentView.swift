@@ -15,35 +15,42 @@ struct ContentView: View {
     @State private var selection = 0
  
     var body: some View {
-        TabView(selection: $selection){
-            //カーテン制御機能View
-            ControlView()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "gear")
-                        Text("Control")
-                    }
-                }.tag(0)
-            //カーテン開閉時刻設定View
-            AlarmView()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "alarm.fill")
-                        Text("Alarm")
-                    }
-                }.tag(1)
-            //デバイス接続状態(BLE)View
-            BleStateView()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "antenna.radiowaves.left.and.right")
-                        Text("Search")
-                    }
-                }.tag(2)
-        }
+        GeometryReader{ geometry in
+            VStack(spacing: 1){
+                //ステータスバーと同位置・同サイズのColorビューを配置
+                Color.black
+                    .frame(height: geometry.safeAreaInsets.top)
+                
+                TabView(selection: self.$selection){
+                    //カーテン制御機能View
+                    ControlView()
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "gear")
+                                Text("Control")
+                            }
+                    }.tag(0)
+                    //カーテン開閉時刻設定View
+                    AlarmView()
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "alarm.fill")
+                                Text("Alarm")
+                            }
+                    }.tag(1)
+                    //デバイス接続状態(BLE)View
+                    BleStateView()
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "antenna.radiowaves.left.and.right")
+                                Text("Search")
+                            }
+                    }.tag(2)
+                }
+            }} .edgesIgnoringSafeArea(.top)
     }
 }
 
