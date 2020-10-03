@@ -12,27 +12,49 @@ struct ControlView: View {
     var body: some View {
         ZStack{
             Color("background")
-            VStack(){
-                Spacer().background(Color.blue)
-                // 窓とカーテンのイメージ画像
-                ZStack(){
-                    Image("blue_sky")
-                    Image("role_curtain05")
+            GeometryReader{ geometry in
+                VStack(){
+                    Spacer()
+                        .frame(height: geometry.size.height * 0.1)
+                    // 窓とカーテンのイメージ画像
+                    ZStack(){
+                        Image("blue_sky")
+                            .resizable()
+                            .scaledToFit()
+                        Image("role_curtain05")
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.4)
+                    
+                    Spacer()
+                        .frame(height: geometry.size.height * 0.1)
+                    
+                    HStack(){
+                        Spacer()
+                        // カーテン開けるボタン
+                        Image("openBtn")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geometry.size.width * 0.4)
+
+                        Spacer()
+                        // カーテン閉めるボタン
+                        Image("closeBtn")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geometry.size.width * 0.4)
+                        Spacer()
+                    }
+                    Spacer()
+                        .frame(height: geometry.size.height * 0.05)
+                    // 作動を止めるボタン
+                    Image("stopBtn")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geometry.size.width * 0.4)
+                    Spacer()
                 }
-                Spacer().background(Color.blue)
-                HStack(){
-                    Spacer().background(Color.blue)
-                    // カーテン開けるボタン
-                    Image("openBtn")
-                    Spacer().background(Color.blue)
-                    // カーテン閉めるボタン
-                    Image("closeBtn")
-                    Spacer().background(Color.blue)
-                }
-                Spacer().background(Color.blue)
-                // 作動を止めるボタン
-                Image("stopBtn")
-                Spacer().background(Color.blue)
             }
         }
     }
