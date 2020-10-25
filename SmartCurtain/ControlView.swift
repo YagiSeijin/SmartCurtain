@@ -15,7 +15,7 @@ struct ControlView: View {
             GeometryReader{ geometry in
                 VStack(){
                     Spacer()
-                        .frame(height: geometry.size.height * 0.1)
+                        .frame(height: geometry.size.height * 0.05)
                     // 窓とカーテンのイメージ画像
                     ZStack(){
                         Image("blue_sky")
@@ -25,7 +25,7 @@ struct ControlView: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.4)
+                    .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.45)
                     
                     Spacer()
                         .frame(height: geometry.size.height * 0.1)

@@ -20,7 +20,10 @@ struct ContentView: View {
                 //ステータスバーと同位置・同サイズのColorビューを配置
                 Color.black
                     .frame(height: geometry.safeAreaInsets.top)
-                
+                //デバイス接続状態(BLEStateビュー)
+                BleStateView()
+                    .frame(height: geometry.size.height * 0.125)
+                //Tabビュー
                 TabView(selection: self.$selection){
                     //カーテン制御機能View
                     ControlView()
@@ -40,15 +43,6 @@ struct ContentView: View {
                                 Text("Alarm")
                             }
                     }.tag(1)
-                    //デバイス接続状態(BLE)View
-                    BleStateView()
-                        .font(.title)
-                        .tabItem {
-                            VStack {
-                                Image(systemName: "antenna.radiowaves.left.and.right")
-                                Text("Search")
-                            }
-                    }.tag(2)
                 }
             }} .edgesIgnoringSafeArea(.top)
     }
