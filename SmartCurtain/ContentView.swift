@@ -19,7 +19,8 @@ struct ContentView: View {
             VStack(spacing: 1){
                 //ステータスバーと同位置・同サイズのColorビューを配置
                 Color.black
-                    .frame(height: geometry.safeAreaInsets.top)
+//                    .frame(height: geometry.safeAreaInsets.top)
+                    .frame(height: UIApplication.shared.statusBarFrame.height)
                 //デバイス接続状態(BLEStateビュー)
                 BleStateView()
                     .frame(height: geometry.size.height * 0.125)

@@ -18,6 +18,8 @@
 		CE5A7AF424E6BD7C00399F1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5A7AF224E6BD7C00399F1D /* LaunchScreen.storyboard */; };
 		CE5A7AFF24E6BD7D00399F1D /* SmartCurtainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7AFE24E6BD7D00399F1D /* SmartCurtainTests.swift */; };
 		CE5A7B0A24E6BD7D00399F1D /* SmartCurtainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7B0924E6BD7D00399F1D /* SmartCurtainUITests.swift */; };
+		CEA4550A279550DF000B6441 /* BleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA45509279550DE000B6441 /* BleHandler.swift */; };
+		CEA4550D27956CDB000B6441 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4550C27956CDB000B6441 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CE5A7B0524E6BD7D00399F1D /* SmartCurtainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartCurtainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A7B0924E6BD7D00399F1D /* SmartCurtainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCurtainUITests.swift; sourceTree = "<group>"; };
 		CE5A7B0B24E6BD7D00399F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA45509279550DE000B6441 /* BleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleHandler.swift; sourceTree = "<group>"; };
+		CEA4550C27956CDB000B6441 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA4550D27956CDB000B6441 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,7 @@
 				CE5A7AFD24E6BD7D00399F1D /* SmartCurtainTests */,
 				CE5A7B0824E6BD7D00399F1D /* SmartCurtainUITests */,
 				CE5A7AE524E6BD6F00399F1D /* Products */,
+				CEA4550B27956CDA000B6441 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +111,7 @@
 		CE5A7AE624E6BD6F00399F1D /* SmartCurtain */ = {
 			isa = PBXGroup;
 			children = (
+				CEA45509279550DE000B6441 /* BleHandler.swift */,
 				CE5A7AE724E6BD6F00399F1D /* AppDelegate.swift */,
 				CE5A7AE924E6BD6F00399F1D /* SceneDelegate.swift */,
 				CE5A7AEB24E6BD6F00399F1D /* ContentView.swift */,
@@ -143,6 +150,14 @@
 				CE5A7B0B24E6BD7D00399F1D /* Info.plist */,
 			);
 			path = SmartCurtainUITests;
+			sourceTree = "<group>";
+		};
+		CEA4550B27956CDA000B6441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4550C27956CDB000B6441 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +296,7 @@
 				CE24237924F56E060096D9BA /* BleStateView.swift in Sources */,
 				CE24237724F56D270096D9BA /* AlarmView.swift in Sources */,
 				CE5A7AEA24E6BD6F00399F1D /* SceneDelegate.swift in Sources */,
+				CEA4550A279550DF000B6441 /* BleHandler.swift in Sources */,
 				CE5A7AEC24E6BD6F00399F1D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
