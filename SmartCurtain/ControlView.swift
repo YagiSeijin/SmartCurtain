@@ -21,9 +21,7 @@ struct ControlView: View {
                         Image("blue_sky")
                             .resizable()
                             .scaledToFit()
-//                        Image("role_curtain05")
                         startCurtainAnimation(width: geometry.size.width * 0.9, height:  geometry.size.height * 0.45, curtainImages: openImages)
-//                            .scaledToFit()
                     }
                     .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.45)
                     
