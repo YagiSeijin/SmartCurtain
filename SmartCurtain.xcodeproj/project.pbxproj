@@ -18,6 +18,7 @@
 		CE5A7AF424E6BD7C00399F1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5A7AF224E6BD7C00399F1D /* LaunchScreen.storyboard */; };
 		CE5A7AFF24E6BD7D00399F1D /* SmartCurtainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7AFE24E6BD7D00399F1D /* SmartCurtainTests.swift */; };
 		CE5A7B0A24E6BD7D00399F1D /* SmartCurtainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A7B0924E6BD7D00399F1D /* SmartCurtainUITests.swift */; };
+		CE927DCF27AFEC9800E76B34 /* SystemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE927DCE27AFEC9800E76B34 /* SystemState.swift */; };
 		CEA4550A279550DF000B6441 /* BleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA45509279550DE000B6441 /* BleHandler.swift */; };
 		CEA4550D27956CDB000B6441 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4550C27956CDB000B6441 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		CE5A7B0524E6BD7D00399F1D /* SmartCurtainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartCurtainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A7B0924E6BD7D00399F1D /* SmartCurtainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCurtainUITests.swift; sourceTree = "<group>"; };
 		CE5A7B0B24E6BD7D00399F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE927DCE27AFEC9800E76B34 /* SystemState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemState.swift; sourceTree = "<group>"; };
 		CEA45509279550DE000B6441 /* BleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleHandler.swift; sourceTree = "<group>"; };
 		CEA4550C27956CDB000B6441 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				CE24237424F2CA990096D9BA /* ControlView.swift */,
 				CE24237624F56D260096D9BA /* AlarmView.swift */,
 				CE24237824F56E060096D9BA /* BleStateView.swift */,
+				CE927DCE27AFEC9800E76B34 /* SystemState.swift */,
 				CE5A7AED24E6BD7C00399F1D /* Assets.xcassets */,
 				CE5A7AF224E6BD7C00399F1D /* LaunchScreen.storyboard */,
 				CE5A7AF524E6BD7C00399F1D /* Info.plist */,
@@ -293,6 +296,7 @@
 			files = (
 				CE24237524F2CA990096D9BA /* ControlView.swift in Sources */,
 				CE5A7AE824E6BD6F00399F1D /* AppDelegate.swift in Sources */,
+				CE927DCF27AFEC9800E76B34 /* SystemState.swift in Sources */,
 				CE24237924F56E060096D9BA /* BleStateView.swift in Sources */,
 				CE24237724F56D270096D9BA /* AlarmView.swift in Sources */,
 				CE5A7AEA24E6BD6F00399F1D /* SceneDelegate.swift in Sources */,

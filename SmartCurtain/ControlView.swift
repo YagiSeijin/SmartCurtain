@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ControlView: View {
+    
+    @EnvironmentObject var systemState :SystemState
+    
     var body: some View {
         ZStack{
             Color("background")
@@ -21,7 +24,15 @@ struct ControlView: View {
                         Image("blue_sky")
                             .resizable()
                             .scaledToFit()
-                        startCurtainAnimation(width: geometry.size.width * 0.9, height:  geometry.size.height * 0.45, curtainImages: openImages)
+                        if(self.systemState.curtainState == .openingOperation){
+                            startCurtainAnimation(width: geometry.size.width * 0.9, height:  geometry.size.height * 0.45, curtainImages: openImages)
+                        }
+                        else if(self.systemState.curtainState == .closingOperation){
+                            startCurtainAnimation(width: geometry.size.width * 0.9, height:  geometry.size.height * 0.45, curtainImages: closeImages)
+                        }
+                        else{
+                            Image("role_curtain05")
+                        }
                     }
                     .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.45)
                     
@@ -31,26 +42,41 @@ struct ControlView: View {
                     HStack(){
                         Spacer()
                         // カーテン開けるボタン
-                        Image("openBtn")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width * 0.4)
+                        Button(action: {
+                            self.systemState.curtainState = .openingOperation
+                            
+                        }) {
+                            Image("openBtn")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geometry.size.width * 0.4)
 
+                        }
                         Spacer()
                         // カーテン閉めるボタン
-                        Image("closeBtn")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width * 0.4)
+                        Button(action: {
+                            self.systemState.curtainState = .closingOperation
+                            
+                        }) {
+                            Image("closeBtn")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geometry.size.width * 0.4)
+                        }
                         Spacer()
                     }
                     Spacer()
                         .frame(height: geometry.size.height * 0.05)
                     // 作動を止めるボタン
-                    Image("stopBtn")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: geometry.size.width * 0.4)
+                    Button(action: {
+                        self.systemState.curtainState = .stopping
+                        
+                    }) {
+                        Image("stopBtn")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geometry.size.width * 0.4)
+                    }
                     Spacer()
                 }
             }
@@ -61,6 +87,7 @@ struct ControlView: View {
 struct ControlView_Previews: PreviewProvider {
     static var previews: some View {
         ControlView()
+            .environmentObject(SystemState())
     }
 }
 
