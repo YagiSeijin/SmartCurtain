@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum UserReq {
-    case none
-    case autoOpen
-    case autoClose
-    case stop
-}
-
 enum CurtaionState {
     case stopping
     case openingOperation
